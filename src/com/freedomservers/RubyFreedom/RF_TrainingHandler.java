@@ -37,11 +37,30 @@ public class RF_TrainingHandler {
         player.sendMessage("[1] Type in the command that is used to ban someone.");
         if(!cmd.equalsIgnoreCase("/gtfo")) {
             checkevent.setCancelled(true);
-            player.sendMessage(ChatColor.RED + "Incorrect! Try again!");
+            player.sendMessage(ChatColor.RED + "Incorrect! Try the quiz again!");
+            return;
         }
         else {
             checkevent.setCancelled(true);
             player.sendMessage(ChatColor.GREEN + "Correct! Moving on.");
+            ques2(player);
+            return;
+        }
+    }
+    
+    public static void ques2(Player player) {
+        String cmd = checkevent.getMessage();
+        player.sendMessage("[2] Is invisibility allowed? Yes or no? Type '/yes' for yes and type '/no' for no.");
+        if (cmd.equalsIgnoreCase("/yes")) {
+            checkevent.setCancelled(true);
+            player.sendMessage(ChatColor.RED + "Incorrect! Try the quiz again!");
+            return;
+        }
+        else if (cmd.equalsIgnoreCase("/no")) {
+            checkevent.setCancelled(true);
+            player.sendMessage(ChatColor.GREEN + "Correct! Moving on.");
+            //TODO: Add more questions
+            return;
         }
     }
 }
