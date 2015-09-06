@@ -1,0 +1,7 @@
+name: RFTraining
+main: com.freedomservers.RubyFreedom.RFTraining
+version: 1.0
+description: Plugin for training mode purposes.
+softdepend: [RubyFreedomMod]
+authors: [AwesomePinch, tylerhyperHD]
+
