@@ -11,8 +11,6 @@ public class RFTraining extends JavaPlugin {
     public static RFTraining plugin;
     public Server server;
 
-    public String version = plugin.getDescription().getVersion();
-
     @Override
     public void onLoad() {
         RFTraining.plugin = this;
@@ -22,11 +20,11 @@ public class RFTraining extends JavaPlugin {
     public void onEnable() {
         final PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new PlayerListener(), plugin);
-        RFLogger.info("RFTraining v" + version + "has been enabled!");
+        RFLogger.info("RFTraining has been enabled!");
     }
 
     @Override
     public void onDisable() {
-        RFLogger.info("RFTraining v" + version + "has been disabled!");
+        RFLogger.info("RFTraining has been disabled!");
     }
 }
